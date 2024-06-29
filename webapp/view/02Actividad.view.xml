@@ -1,0 +1,24 @@
+<mvc:View   
+            controllerName="lorkgroup.actividades.controller.02Actividad"
+            xmlns:mvc="sap.ui.core.mvc"
+            xmlns:core="sap.ui.core"
+            xmlns="sap.m">
+
+                        <Panel 	headerText="{i18n>panelTitle_02}"
+                            	class="sapUiResponsiveMargin"
+                            	width="90%"
+                                expandable="true">
+                            <content>
+
+                                    <!--<core:Fragment  fragmentName="lorkgroup.actividades.fragment.Form02b"
+                                                    type="XML"/>--> 
+                                <Button
+                                    text="{i18n>Btn02Act_popup}"
+                                    press=".onPopupButtonPress"
+                                    class="sapUiMediumMargin"
+                                    ariaHasPopup="Dialog" />
+                            </content>
+
+                        </Panel>
+                            
+</mvc:View>

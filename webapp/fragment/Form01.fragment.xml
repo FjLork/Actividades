@@ -1,0 +1,30 @@
+<core:FragmentDefinition
+                    xmlns="sap.m"
+                    xmlns:form="sap.ui.layout.form"
+                    xmlns:core="sap.ui.core">
+
+
+                                    <form:SimpleForm 	id="idSimpleForm"
+                                                        editable="true">
+                                        <form:content>
+
+                                            <Label 	text="{i18n>lblName_01}" /> 		<Input 			required="true"/>
+                                            <Label 	text="{i18n>lblSubName_01}" /> 	    <Input 			required="true"/>
+                                            <Label 	text="{i18n>lblDate_01}" />     	<DatePicker 	value="{
+                                                                                                                    path: '/date',
+                                                                                                                    type: 'sap.ui.model.type.Date'}" />
+                                            <Label 	text="{i18n>lblSexo_01}" /> 		<Select			selectedKey="{/personalData/gender}"
+                                                                                                        change="onSelect01Change"
+                                                                                                        required="true">
+                                                                                            <core:Item key="Hombre" text="Hombre" />
+                                                                                            <core:Item key="Mujer" 	text="Mujer" />
+                                                                                    </Select>
+                                            <Label 	text="{i18n>lblNote_01}" />		<TextArea	placeholder="Notas"
+                                                                                                value="{/personalData/notes}"
+                                                                                                change="onNotesTextArea01Change"   />
+
+
+                                        </form:content>
+                                    </form:SimpleForm>
+       
+</core:FragmentDefinition>

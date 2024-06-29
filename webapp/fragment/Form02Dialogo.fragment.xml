@@ -1,0 +1,147 @@
+<core:FragmentDefinition    xmlns="sap.m"
+                            xmlns:form="sap.ui.layout.form"
+	                        xmlns:mvc="sap.ui.core.mvc"
+                            xmlns:core="sap.ui.core">
+	<Dialog 	title="Hello {/recipient/name}"
+                id="myDialog">
+                <content>
+    <VBox class="sapUiSmallMargin">
+        <form:Form editable="true">
+            <form:layout>
+            <!-- 
+                    labelSpanXL="4"            - Intervalo predeterminado para etiquetas
+                    adjustLabelSpan="false"    - 
+                    emptySpanXL="0"            - Espacio Vacio
+                    columnsXL="2"              - Columnas
+             -->
+                <form:ResponsiveGridLayout
+                    labelSpanXL="4"                   
+                    labelSpanL="3"
+                    labelSpanM="4"
+                    labelSpanS="11"
+                    adjustLabelSpan="false"
+                    emptySpanXL="0"
+                    emptySpanL="2"
+                    columnsXL="3"
+                    columnsM="2"
+                    singleContainerFullSize="false" />
+            </form:layout>
+
+            <form:formContainers>
+                <!-- FormContainer "Office1" -->
+                <form:FormContainer title="{i18n>From2aTitulo}">
+                    <form:formElements>
+                        <form:FormElement   label="{i18n>From2aNombre}">
+                            <form:fields>
+                                <Input required="true" placeholder="{i18n>Ingrese} {i18n>From2aNombre}"  />
+                            </form:fields>
+                        </form:FormElement>
+                        <form:FormElement   label="{i18n>From2aApellidos}">
+                            <form:fields>
+                                <Input required="true" placeholder="{i18n>Ingrese} {i18n>From2aApellidos}"/> 
+                            </form:fields>
+                        </form:FormElement>
+                        <form:FormElement   label="{i18n>From2aFchNaci}">
+                            <form:fields>
+                                <DatePicker 	value="{ path: '/date',
+                                                         type: 'sap.ui.model.type.Date'}" 
+                                                required="true"
+                                                placeholder="{i18n>From2aFchNaci}"  />
+                            </form:fields>
+                        </form:FormElement>
+                        <form:FormElement   label="{i18n>From2aNacion}">
+                            <form:fields>
+                                <Switch state="true" customTextOn="{i18n>SI}" customTextOff="{i18n>NO}" />
+                            </form:fields>
+                        </form:FormElement>
+                        <form:FormElement   label="{i18n>From2aNotas}" 
+                                            id="id.Notas.FormElement">
+                            <form:fields>
+                               <TextArea	placeholder="{i18n>From2aNotas}"
+                                            value="{/personalData/notes}"  />
+                            </form:fields>
+                        </form:FormElement>
+                    </form:formElements>
+                </form:FormContainer>
+
+                <!-- FormContainer "Office2" -->
+                <form:FormContainer title="{i18n>From2bTitulo}">
+                    <form:formElements>
+                        <form:FormElement label="{i18n>From2bPais}">
+                            <form:fields>
+                                <Select     required="true"
+					                        forceSelection="false"
+					                        selectedKey="{/SelectedPaises}"
+					                        items="{    path: '/PaisesCollect',
+						                                sorter: { path: 'Name' }
+					                                }">
+					                        <core:Item key="{ProductId}" text="{Name}" />
+				                </Select>
+                            </form:fields>
+                        </form:FormElement>
+                        <form:FormElement label="{i18n>From2bDepart}">
+                            <form:fields>
+                                <Select     required="true"
+                                            forceSelection="false"
+                                            selectedKey="{/SelectedDepart}"
+                                            items="{    path: '/DepartCollect',
+                                                        sorter: { path: 'Name' }
+                                                    }">
+                                            <core:Item key="{ProductId}" text="{Name}" />
+                                </Select>
+                            </form:fields>
+                        </form:FormElement>
+                        <form:FormElement label="{i18n>From2bCapital}">
+                            <form:fields>
+                                <Select     required="true"
+                                            forceSelection="false"
+                                            selectedKey="{/SelectedCapital}"
+                                            items="{    path: '/CapitalCollect',
+                                                        sorter: { path: 'Name' }
+                                                    }">
+                                            <core:Item key="{ProductId}" text="{Name}" />
+                                </Select>
+                            </form:fields>
+                        </form:FormElement>
+                        <form:FormElement label="{i18n>From2bDirecc}">
+                            <form:fields>
+                               <TextArea	placeholder="{i18n>From2bDirecc}"
+                                            value="{/personalData/notes}"  />
+                            </form:fields>
+                        </form:FormElement> 
+                    </form:formElements>
+                </form:FormContainer>
+
+                <!-- FormContainer "Office3" -->
+                <form:FormContainer title="{i18n>From2cTitulo}">
+                    <form:formElements>
+                        <form:FormElement   label="{i18n>From2cMail_1}">
+                            <form:fields>
+                                <Input required="true" placeholder="{i18n>Ingrese} {i18n>From2cMail_2}"  />
+                            </form:fields>
+                        </form:FormElement>
+                        <form:FormElement   label="{i18n>From2cTlf_1}">
+                            <form:fields>
+                                <Input  required="true" placeholder="{i18n>Ingrese} {i18n>From2cTlf_2}"
+                                        type="Number"/> 
+                            </form:fields>
+                        </form:FormElement>
+                    </form:formElements>
+                </form:FormContainer>          
+            </form:formContainers>
+
+        </form:Form>
+            </VBox>
+        </content>
+		<footer>
+			<Toolbar>
+				<content>
+            <Button text="{i18n>BtnCerrar}"
+					type="Reject"
+                    press=".onButtonCerrar"
+                    class="sapUiMediumMargin" />
+            </content>
+			</Toolbar>
+		</footer>
+    </Dialog>
+</core:FragmentDefinition>

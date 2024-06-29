@@ -1,0 +1,27 @@
+<mvc:View   controllerName="lorkgroup.actividades.controller.App"
+            xmlns="sap.m"
+            xmlns:mvc="sap.ui.core.mvc">
+
+    <Shell id="id_Shell" 
+    >
+        <App id="id_App">
+            <pages>
+                <Page title="{i18n>Empleados}">
+                    <content>
+                        <!-- Primera vista XML -->
+                        <mvc:XMLView id="id.01ActividadXMLView" 
+                                    viewName="lorkgroup.actividades.view.01Actividad" />
+                        <!-- Segunda vista XML -->
+                        <mvc:XMLView id="id.02ActividadXMLView" 
+                                    viewName="lorkgroup.actividades.view.02Actividad" />
+                        <!-- Segunda vista XML -->
+                        <mvc:XMLView id="id.03ActividadXMLView" 
+                                    viewName="lorkgroup.actividades.view.03Actividad" />
+
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+
+</mvc:View>

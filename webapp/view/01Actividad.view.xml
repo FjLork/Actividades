@@ -1,0 +1,18 @@
+<mvc:View   
+            controllerName="lorkgroup.actividades.controller.01Actividad"
+            xmlns:mvc="sap.ui.core.mvc"
+            xmlns:core="sap.ui.core"
+            xmlns="sap.m">
+                        <Panel 	headerText="{i18n>panelTitle_01}"
+                            	class="sapUiResponsiveMargin"
+                            	width="90%"
+                                expandable="true">
+                            <content>
+
+                                    <core:Fragment  fragmentName="lorkgroup.actividades.fragment.Form01"
+                                                    type="XML"/>
+
+                            </content>
+                        </Panel>
+                                 
+</mvc:View>
