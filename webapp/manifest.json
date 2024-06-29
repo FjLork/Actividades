@@ -63,6 +63,10 @@
                               ],
           "fallbackLocale": "es"
         }
+      },
+      "invoices": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/Invoices.json"
       }
     },
     "resources": {
