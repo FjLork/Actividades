@@ -40,5 +40,32 @@
 	  "ShippedDate": "2015-01-27T00:00:00",
 	  "Status": "A"
 	}
-  ]
+  ],
+
+  "Usuario": [
+    {
+        "DNI": "123456789-1",
+        "Nombres": "José María",
+        "Apellidos": "Travez González",
+        "Fecha de Nacimiento": "01/01/1990",
+        "País": "COL",
+        "Estatus": "Active"
+    },
+    {
+        "DNI": "123456789-2",
+        "Nombres": "José Luis",
+        "Apellidos": "Medina Alvarado",
+        "Fecha de Nacimiento": "02/02/1991",
+        "País": "VEN",
+        "Estatus": "Active"
+    },
+    {
+        "DNI": "123456789-3",
+        "Nombres": "Pedro Juan",
+        "Apellidos": "Jiménez Boscán",
+        "Fecha de Nacimiento": "03/03/1992",
+        "País": "ARG",
+        "Estatus": "Active"
+    }
+]
 }
